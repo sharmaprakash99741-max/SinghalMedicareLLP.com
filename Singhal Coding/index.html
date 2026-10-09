@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0b6b3a" />
+<title>Singhal Medicare LLP — Pharmacy & Clinic, Shikohabad</title>
+<meta name="description" content="Singhal Medicare Pharmacy and Clinic, Shikohabad. Medicines and doctors under one roof. 30+ years of family pharmacy experience, 10,000+ products, specialist doctors opposite Ahuja Hospital on Station Road." />
+<meta property="og:title" content="Singhal Medicare LLP — Pharmacy & Clinic" />
+<meta property="og:description" content="Your neighbourhood medicare. Medicines & doctors under one roof in Shikohabad." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/animations.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b6b3a'/%3E%3Cpath d='M32 12v40M12 32h40' stroke='%23f7f3e6' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- ===================== HEADER / NAV ===================== -->
+<header class="site-header" id="siteHeader">
+  <div class="nav-shell">
+    <a href="#/home" class="brand" aria-label="Singhal Medicare home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="34" height="34">
+          <defs>
+            <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#16a34a"/>
+              <stop offset="1" stop-color="#0b6b3a"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="44" height="44" rx="12" fill="url(#bg1)"/>
+          <path d="M24 12v24M12 24h24" stroke="#f7f3e6" stroke-width="4.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong data-i18n="brand.name">Singhal Medicare</strong>
+        <em data-i18n="brand.tag">Pharmacy &amp; Clinic · Shikohabad</em>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#/home"     data-route="home"     class="nav-link"><span data-i18n="nav.home">Home</span></a>
+      <a href="#/pharmacy" data-route="pharmacy" class="nav-link"><span data-i18n="nav.pharmacy">Pharmacy</span></a>
+      <a href="#/doctors"  data-route="doctors"  class="nav-link"><span data-i18n="nav.doctors">Our doctors</span></a>
+      <a href="#/about"    data-route="about"    class="nav-link"><span data-i18n="nav.about">About us</span></a>
+      <a href="#/visit"    data-route="visit"    class="nav-link"><span data-i18n="nav.visit">Visit us</span></a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span class="lang-opt" data-lang="en">EN</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-opt" data-lang="hi">हि</span>
+      </button>
+      <a class="btn btn-call" href="tel:+919457088602" aria-label="Call now">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span data-i18n="nav.call">Call</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Open status pill -->
+  <div class="status-strip">
+    <div class="status-pill" id="statusPill">
+      <span class="dot" id="statusDot"></span>
+      <span id="statusText">Checking hours…</span>
+    </div>
+    <span class="status-hours" data-i18n="status.hours">Every day · 8:30 AM – 8:00 PM (IST)</span>
+  </div>
+</header>
+
+<!-- ===================== ROUTER OUTLET ===================== -->
+<main id="app" class="app">
+
+<!-- ---------- PAGE: HOME ---------- -->
+<section class="page" id="page-home" data-page="home">
+  <div class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="orb orb-c"></div>
+      <div class="grid-lines"></div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-copy reveal">
+        <span class="eyebrow" data-i18n="hero.eyebrow">Your neighbourhood. Your medicare.</span>
+        <h1 class="hero-title">
+          <span data-i18n="hero.title1">Medicines &amp; doctors.</span>
+          <span class="accent" data-i18n="hero.title2">Under one roof.</span>
+        </h1>
+        <p class="hero-lead" data-i18n="hero.lead">
+          Over 30 years of family pharmacy experience, 10,000+ products, and a clinic with specialist doctors —
+          opposite Ahuja Hospital on Station Road, Shikohabad.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#/pharmacy">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <span data-i18n="hero.cta1">Check a medicine</span>
+          </a>
+          <a class="btn btn-ghost" href="#/doctors">
+            <span data-i18n="hero.cta2">Meet our doctors</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat" data-count="30" data-suffix="+"><span class="stat-num">0</span><span class="stat-suffix">+</span><em data-i18n="stat.years">Years serving</em></div>
+          <div class="stat" data-count="10000" data-suffix="+"><span class="stat-num">0</span><span class="stat-suffix">+</span><em data-i18n="stat.products">Products in stock</em></div>
+          <div class="stat" data-count="8" data-suffix=""><span class="stat-num">0</span><em data-i18n="stat.doctors">Specialist doctors</em></div>
+        </div>
+      </div>
+
+      <!-- 3D floating capsule -->
+      <div class="hero-3d reveal" aria-hidden="true">
+        <div class="scene">
+          <div class="capsule" id="capsule3d">
+            <div class="cap-top"></div>
+            <div class="cap-bot"></div>
+            <div class="cap-shine"></div>
+          </div>
+          <div class="pill pill-1"></div>
+          <div class="pill pill-2"></div>
+          <div class="pill pill-3"></div>
+          <div class="cross-3d">
+            <div class="cross-face front"></div>
+            <div class="cross-face back"></div>
+            <div class="cross-face right"></div>
+            <div class="cross-face left"></div>
+            <div class="cross-face top"></div>
+            <div class="cross-face bottom"></div>
+          </div>
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK ACTIONS -->
+  <div class="section quick-actions">
+    <div class="quick-grid">
+      <a class="quick-card tilt" href="#/pharmacy">
+        <div class="qicon q1"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M12 12v4M10 14h4"/></svg></div>
+        <h3 data-i18n="quick.pharmacy">Pharmacy</h3>
+        <p data-i18n="quick.pharmacy.d">Check medicine, upload prescription, wide stock.</p>
+      </a>
+      <a class="quick-card tilt" href="#/doctors">
+        <div class="qicon q2"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3 data-i18n="quick.doctors">Doctors</h3>
+        <p data-i18n="quick.doctors.d">Eight specialists with weekly sitting days.</p>
+      </a>
+      <a class="quick-card tilt" href="https://wa.me/919457088602?text=Hi%20Singhal%20Medicare%2C%20I%20want%20to%20ask%20about%20a%20medicine." target="_blank" rel="noopener">
+        <div class="qicon q3"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.5-8.4zM12 21.9c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.9 9.9 0 0 1 2 12C2 6.5 6.5 2 12 2s10 4.5 10 10-4.5 9.9-10 9.9zm5.4-7.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg></div>
+        <h3 data-i18n="quick.whatsapp">WhatsApp</h3>
+        <p data-i18n="quick.whatsapp.d">Message us for stock, prices, timings.</p>
+      </a>
+      <a class="quick-card tilt" href="#/visit">
+        <div class="qicon q4"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3 data-i18n="quick.visit">Visit us</h3>
+        <p data-i18n="quick.visit.d">Opposite Ahuja Hospital, Station Road.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- WHY US -->
+  <div class="section why">
+    <h2 class="section-title reveal" data-i18n="why.title">Why people choose us</h2>
+    <p class="section-sub reveal" data-i18n="why.sub">A family pharmacy that grew into a full clinic.</p>
+    <div class="why-grid">
+      <div class="why-card reveal tilt">
+        <div class="wicon">📦</div>
+        <h4 data-i18n="why.1.t">Wide stock</h4>
+        <p data-i18n="why.1.d">General medicines, chronic care, skin care, health devices, Ayurvedic products.</p>
+      </div>
+      <div class="why-card reveal tilt">
+        <div class="wicon">🧾</div>
+        <h4 data-i18n="why.2.t">Computerised billing</h4>
+        <p data-i18n="why.2.d">Fast, accurate bills and live stock checks.</p>
+      </div>
+      <div class="why-card reveal tilt">
+        <div class="wicon">💳</div>
+        <h4 data-i18n="why.3.t">Easy payment</h4>
+        <p data-i18n="why.3.d">Cash, debit card, Google Pay and other UPI payments.</p>
+      </div>
+      <div class="why-card reveal tilt">
+        <div class="wicon">🩺</div>
+        <h4 data-i18n="why.4.t">Doctors on site</h4>
+        <p data-i18n="why.4.d">Consult, then buy the prescription next door — no running around.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DOCTORS TODAY (live) -->
+  <div class="section today">
+    <div class="today-head reveal">
+      <h2 class="section-title" data-i18n="today.title">Sitting today</h2>
+      <a href="#/doctors" class="link-arrow"><span data-i18n="today.all">See all doctors</span> →</a>
+    </div>
+    <div class="today-grid" id="todayGrid"></div>
+  </div>
+</section>
+
+<!-- ---------- PAGE: PHARMACY ---------- -->
+<section class="page" id="page-pharmacy" data-page="pharmacy" hidden>
+  <div class="page-head">
+    <span class="eyebrow" data-i18n="ph.eyebrow">Pharmacy</span>
+    <h1 data-i18n="ph.title">Your medicine, one message away.</h1>
+    <p data-i18n="ph.lead">Type the medicine name and we open WhatsApp with your question ready. You can also send a photo of your prescription.</p>
+  </div>
+
+  <div class="pharmacy-wrap">
+    <div class="pharma-card glass reveal">
+      <h3 data-i18n="ph.check">Check if a medicine is available</h3>
+      <form id="medForm" class="med-form" autocomplete="off">
+        <label for="medName" class="sr-only" data-i18n="ph.label">Medicine name</label>
+        <div class="med-input">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input id="medName" name="medName" type="text" placeholder="e.g. Paracetamol 650 mg" required />
+        </div>
+        <div class="med-actions">
+          <button type="submit" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.7 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.5-8.4z"/></svg>
+            <span data-i18n="ph.ask">Ask on WhatsApp</span>
+          </button>
+          <a class="btn btn-ghost" href="tel:+919457088602"><span data-i18n="ph.callbtn">Or call us</span></a>
+        </div>
+        <p class="hint" data-i18n="ph.hint">Opens WhatsApp with your question ready. You can also send a photo of your prescription.</p>
+      </form>
+    </div>
+
+    <div class="categories reveal">
+      <h3 data-i18n="ph.cat">Categories we stock</h3>
+      <div class="cat-grid">
+        <div class="cat tilt"><span>💊</span><p data-i18n="ph.cat.1">General medicines</p></div>
+        <div class="cat tilt"><span>❤️</span><p data-i18n="ph.cat.2">Chronic care</p></div>
+        <div class="cat tilt"><span>🧴</span><p data-i18n="ph.cat.3">Skin &amp; hair care</p></div>
+        <div class="cat tilt"><span>🩺</span><p data-i18n="ph.cat.4">Health devices</p></div>
+        <div class="cat tilt"><span>🌿</span><p data-i18n="ph.cat.5">Ayurvedic</p></div>
+        <div class="cat tilt"><span>🍼</span><p data-i18n="ph.cat.6">Baby &amp; mother care</p></div>
+        <div class="cat tilt"><span>💉</span><p data-i18n="ph.cat.7">Surgical &amp; first aid</p></div>
+        <div class="cat tilt"><span>🥤</span><p data-i18n="ph.cat.8">Nutrition &amp; supplements</p></div>
+      </div>
+    </div>
+
+    <div class="payments reveal glass">
+      <h3 data-i18n="ph.pay">Payment options</h3>
+      <div class="pay-row">
+        <span class="pay">💵 <span data-i18n="ph.pay.cash">Cash</span></span>
+        <span class="pay">💳 <span data-i18n="ph.pay.card">Debit / Credit card</span></span>
+        <span class="pay">📱 Google Pay</span>
+        <span class="pay">📱 PhonePe</span>
+        <span class="pay">📱 Paytm</span>
+        <span class="pay">🏦 UPI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- PAGE: DOCTORS ---------- -->
+<section class="page" id="page-doctors" data-page="doctors" hidden>
+  <div class="page-head">
+    <span class="eyebrow" data-i18n="dr.eyebrow">Our doctors</span>
+    <h1 data-i18n="dr.title">Eight specialists. One clinic.</h1>
+    <p data-i18n="dr.lead">Doctors with a fixed day show a <strong>Today</strong> tag when they sit today. For others, please call to confirm the timing.</p>
+  </div>
+
+  <div class="doc-controls reveal">
+    <input id="docSearch" type="search" placeholder="Search by name or specialty…" />
+    <div class="chips">
+      <button class="chip active" data-filter="all" data-i18n="dr.f.all">All</button>
+      <button class="chip" data-filter="today" data-i18n="dr.f.today">Today</button>
+      <button class="chip" data-filter="physician" data-i18n="dr.f.phy">Physician</button>
+      <button class="chip" data-filter="surgeon" data-i18n="dr.f.sur">Surgeon</button>
+      <button class="chip" data-filter="neuro" data-i18n="dr.f.neu">Neuro</button>
+      <button class="chip" data-filter="skin" data-i18n="dr.f.skn">Skin &amp; cosmetic</button>
+      <button class="chip" data-filter="women" data-i18n="dr.f.wom">Gynecologist</button>
+      <button class="chip" data-filter="child" data-i18n="dr.f.chd">Pediatrician</button>
+      <button class="chip" data-filter="ayur" data-i18n="dr.f.ayu">Ayurvedic</button>
+    </div>
+  </div>
+
+  <div class="doc-grid" id="docGrid"></div>
+  <p class="note" data-i18n="dr.note">Doctor timings may change. Please call before visiting.</p>
+</section>
+
+<!-- ---------- PAGE: ABOUT ---------- -->
+<section class="page" id="page-about" data-page="about" hidden>
+  <div class="page-head">
+    <span class="eyebrow" data-i18n="ab.eyebrow">About us</span>
+    <h1 data-i18n="ab.title">A family pharmacy, three decades strong.</h1>
+  </div>
+
+  <div class="about-wrap">
+    <div class="about-story reveal">
+      <p data-i18n="ab.p1">Singhal Medicare LLP began as a neighbourhood pharmacy in Shikohabad and has served families across Firozabad district for more than 30 years. What started as a single counter of trusted medicines has grown into a full pharmacy-and-clinic — with over 10,000 products on shelf and eight specialist doctors sitting across the week.</p>
+      <p data-i18n="ab.p2">We sit opposite Ahuja Hospital on Station Road, so patients coming from the hospital, the railway station, or the nearby mohallas can pick up a prescription, consult a specialist, and get computerised billing — all in one stop.</p>
+      <p data-i18n="ab.p3">Our promise is simple: honest stock, honest prices, and advice you can trust. Always take medicines as advised by your doctor.</p>
+    </div>
+
+    <div class="about-3d reveal" aria-hidden="true">
+      <div class="cube">
+        <div class="cube-face f-front">S</div>
+        <div class="cube-face f-back">M</div>
+        <div class="cube-face f-right">+</div>
+        <div class="cube-face f-left">℞</div>
+        <div class="cube-face f-top">30</div>
+        <div class="cube-face f-bottom">10k</div>
+      </div>
+    </div>
+
+    <div class="values reveal">
+      <div class="value"><h4 data-i18n="ab.v1.t">Trust</h4><p data-i18n="ab.v1.d">Genuine, in-date medicines sourced from licensed distributors.</p></div>
+      <div class="value"><h4 data-i18n="ab.v2.t">Continuity</h4><p data-i18n="ab.v2.d">Chronic-care patients get the same brands every month.</p></div>
+      <div class="value"><h4 data-i18n="ab.v3.t">Care</h4><p data-i18n="ab.v3.d">Doctors and pharmacists who know the family, not just the file.</p></div>
+      <div class="value"><h4 data-i18n="ab.v4.t">Access</h4><p data-i18n="ab.v4.d">Open every day, 8:30 AM to 8:00 PM.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- PAGE: VISIT ---------- -->
+<section class="page" id="page-visit" data-page="visit" hidden>
+  <div class="page-head">
+    <span class="eyebrow" data-i18n="vs.eyebrow">Visit us</span>
+    <h1 data-i18n="vs.title">Come see us in Shikohabad.</h1>
+  </div>
+
+  <div class="visit-wrap">
+    <div class="visit-card glass reveal">
+      <h3 data-i18n="vs.addr">Address</h3>
+      <p class="addr" id="addrText">Opposite Ahuja Hospital, Station Road, Khera Mohalla, Shikohabad, Firozabad, Uttar Pradesh 283135</p>
+      <div class="visit-actions">
+        <button class="btn btn-ghost" id="copyAddr"><span data-i18n="vs.copy">Copy address</span></button>
+        <a class="btn btn-primary" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Singhal+Medicare+Station+Road+Shikohabad+Firozabad">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span data-i18n="vs.maps">Open in Google Maps</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="visit-card glass reveal">
+      <h3 data-i18n="vs.hours">Hours</h3>
+      <ul class="hours">
+        <li><span data-i18n="vs.day">Every day</span><strong>8:30 AM – 8:00 PM</strong></li>
+      </ul>
+      <div class="live-status" id="liveStatus"></div>
+    </div>
+
+    <div class="visit-card glass reveal">
+      <h3 data-i18n="vs.contact">Contact</h3>
+      <div class="contact-row">
+        <a class="btn btn-primary" href="tel:+919457088602"><span data-i18n="vs.call">Call now</span></a>
+        <a class="btn btn-wa" target="_blank" rel="noopener"
+           href="https://wa.me/919457088602?text=Hi%20Singhal%20Medicare">
+          <span data-i18n="vs.wa">WhatsApp</span>
+        </a>
+      </div>
+      <p class="phone-big">+91 94570 88602</p>
+    </div>
+
+    <div class="map-frame reveal">
+      <iframe
+        title="Singhal Medicare location"
+        src="https://www.google.com/maps?q=Station+Road+Shikohabad+Firozabad&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="faq reveal">
+    <h3 data-i18n="vs.faq">Frequently asked</h3>
+    <details><summary data-i18n="vs.faq.q1">Do you home-deliver medicines?</summary><p data-i18n="vs.faq.a1">Please WhatsApp us your prescription and pin code — we will confirm delivery for your area.</p></details>
+    <details><summary data-i18n="vs.faq.q2">Do I need an appointment to see a doctor?</summary><p data-i18n="vs.faq.a2">For doctors with fixed sitting days, walk-ins during their hours are fine. For others, please call to confirm timing.</p></details>
+    <details><summary data-i18n="vs.faq.q3">Which payments do you accept?</summary><p data-i18n="vs.faq.a3">Cash, debit / credit card, Google Pay, PhonePe, Paytm and UPI.</p></details>
+    <details><summary data-i18n="vs.faq.q4">Are you open on Sunday?</summary><p data-i18n="vs.faq.a4">Yes — every day, 8:30 AM to 8:00 PM IST.</p></details>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== MOBILE STICKY ===================== -->
+<div class="mobile-bar">
+  <a href="tel:+919457088602" class="m-btn m-call">📞 <span data-i18n="nav.call">Call</span></a>
+  <a target="_blank" rel="noopener" href="https://wa.me/919457088602?text=Hi%20Singhal%20Medicare" class="m-btn m-wa">💬 <span data-i18n="vs.wa">WhatsApp</span></a>
+  <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Singhal+Medicare+Station+Road+Shikohabad" class="m-btn m-map">📍 <span data-i18n="vs.maps">Maps</span></a>
+</div>
+
+<!-- ===================== FOOTER + WATERMARK ===================== -->
+<footer class="site-footer">
+  <div class="foot-grid">
+    <div>
+      <div class="foot-brand">
+        <strong>Singhal Medicare LLP</strong>
+        <span data-i18n="foot.tag">Pharmacy &amp; Clinic · Shikohabad</span>
+      </div>
+      <p class="foot-note" data-i18n="foot.disclaimer">Doctor timings may change; please call before visiting. Always take medicines as advised by your doctor.</p>
+    </div>
+    <div>
+      <h5 data-i18n="foot.explore">Explore</h5>
+      <a href="#/home" data-i18n="nav.home">Home</a>
+      <a href="#/pharmacy" data-i18n="nav.pharmacy">Pharmacy</a>
+      <a href="#/doctors" data-i18n="nav.doctors">Our doctors</a>
+      <a href="#/about" data-i18n="nav.about">About us</a>
+      <a href="#/visit" data-i18n="nav.visit">Visit us</a>
+    </div>
+    <div>
+      <h5 data-i18n="foot.contact">Contact</h5>
+      <a href="tel:+919457088602">+91 94570 88602</a>
+      <a target="_blank" rel="noopener" href="https://wa.me/919457088602">WhatsApp</a>
+      <span data-i18n="foot.hours">Every day · 8:30 AM – 8:00 PM</span>
+    </div>
+    <div>
+      <h5 data-i18n="foot.addr">Address</h5>
+      <span>Opposite Ahuja Hospital, Station Road,<br/>Khera Mohalla, Shikohabad,<br/>Firozabad, Uttar Pradesh 283135</span>
+    </div>
+  </div>
+
+  <div class="watermark" aria-label="Made by Aryan Sharma">
+    <span class="wm-line"></span>
+    <span class="wm-text">Made by <strong>Aryan Sharma</strong></span>
+    <span class="wm-line"></span>
+  </div>
+  <div class="copyright">© <span id="year"></span> Singhal Medicare LLP. All rights reserved.</div>
+</footer>
+
+<!-- ===================== DOCTOR DIALOG ===================== -->
+<div class="modal" id="docModal" role="dialog" aria-modal="true" hidden>
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/doctors.js"></script>
+<script src="js/pharmacy.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

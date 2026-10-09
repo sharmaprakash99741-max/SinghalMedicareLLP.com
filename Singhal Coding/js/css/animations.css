@@ -1,0 +1,80 @@
+/* ============================================================
+   Singhal Medicare — animations & 3D keyframes
+   ============================================================ */
+
+@keyframes pulseDot{
+  0%,100%{box-shadow:0 0 0 4px rgba(34,197,94,.20)}
+  50%{box-shadow:0 0 0 8px rgba(34,197,94,.05)}
+}
+@keyframes tagPulse{
+  0%,100%{transform:scale(1);box-shadow:0 6px 14px rgba(245,158,11,.40)}
+  50%{transform:scale(1.06);box-shadow:0 10px 22px rgba(245,158,11,.55)}
+}
+@keyframes float1{
+  0%,100%{transform:translate(0,0) scale(1)}
+  50%{transform:translate(30px,-20px) scale(1.08)}
+}
+@keyframes float2{
+  0%,100%{transform:translate(0,0) scale(1)}
+  50%{transform:translate(-40px,20px) scale(1.1)}
+}
+@keyframes float3{
+  0%,100%{transform:translate(0,0) scale(1)}
+  50%{transform:translate(20px,30px) scale(.94)}
+}
+@keyframes sceneSpin{
+  from{transform:rotateY(0deg)}
+  to{transform:rotateY(360deg)}
+}
+@keyframes capFloat{
+  0%,100%{transform:translate(-50%,-50%) rotateZ(-25deg) translateY(0)}
+  50%{transform:translate(-50%,-50%) rotateZ(-20deg) translateY(-16px)}
+}
+@keyframes pillFloat{
+  0%,100%{transform:translateY(0) rotate(0)}
+  50%{transform:translateY(-22px) rotate(180deg)}
+}
+@keyframes crossSpin{
+  from{transform:rotateY(0) rotateX(0)}
+  to{transform:rotateY(360deg) rotateX(360deg)}
+}
+@keyframes ringSpin{
+  from{transform:translate(-50%,-50%) rotateX(70deg) rotateZ(0)}
+  to{transform:translate(-50%,-50%) rotateX(70deg) rotateZ(360deg)}
+}
+@keyframes cubeSpin{
+  from{transform:rotateX(-15deg) rotateY(0)}
+  to{transform:rotateX(-15deg) rotateY(360deg)}
+}
+@keyframes pageIn{
+  from{opacity:0;transform:translateY(14px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes modalIn{
+  from{opacity:0;transform:scale(.94) translateY(10px)}
+  to{opacity:1;transform:scale(1) translateY(0)}
+}
+@keyframes shimmer{
+  0%{background-position:-400px 0}
+  100%{background-position:400px 0}
+}
+
+/* Reveal on scroll */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.9,.2,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* 3D tilt */
+.tilt{transform-style:preserve-3d;will-change:transform}
+.tilt.tilted{transition:transform .18s ease-out}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+  .reveal{opacity:1;transform:none}
+}

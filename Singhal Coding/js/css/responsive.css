@@ -1,0 +1,106 @@
+/* ============================================================
+   Singhal Medicare — responsive breakpoints
+   ============================================================ */
+
+@media (max-width: 1080px){
+  .hero-inner{grid-template-columns:1fr;gap:24px;text-align:center}
+  .hero-copy .hero-lead{margin-left:auto;margin-right:auto}
+  .hero-cta{justify-content:center}
+  .hero-stats{justify-content:center}
+  .hero-3d{min-height:320px}
+  .quick-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .visit-wrap{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+}
+
+@media (max-width: 860px){
+  .nav-links{
+    position:fixed;top:var(--header-h);left:0;right:0;
+    background:rgba(247,243,230,.98);backdrop-filter:blur(16px);
+    flex-direction:column;padding:18px 22px 22px;gap:6px;
+    border-bottom:1px solid var(--line);
+    transform:translateY(-140%);opacity:0;pointer-events:none;
+    transition:transform .38s cubic-bezier(.2,.9,.2,1), opacity .3s ease;
+    box-shadow:var(--shadow-md);
+  }
+  .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav-link{padding:14px 18px;font-size:15.5px;border-radius:14px}
+  .nav-link.active::after{display:none}
+  .hamburger{display:flex}
+  .nav-actions .btn-call span{display:none}
+  .btn-call{padding:11px}
+  .status-strip{padding-bottom:10px}
+}
+
+@media (max-width: 720px){
+  :root{--header-h:66px}
+  .app{padding:0 16px 90px}
+  .nav-shell{padding:10px 16px;gap:12px}
+  .brand-text em{display:none}
+  .page-head{padding:36px 0 16px}
+  .page-head h1{font-size:clamp(26px,7vw,36px)}
+  .page-head p{font-size:15px}
+
+  .hero{padding:26px 0 40px;border-radius:20px}
+  .hero-copy .hero-title{font-size:clamp(30px,8.5vw,44px)}
+  .hero-lead{font-size:15.5px}
+  .hero-stats{gap:18px}
+  .stat-num{font-size:26px}
+  .stat-suffix{font-size:20px}
+  .scene{width:260px;height:300px}
+  .capsule{width:88px;height:200px}
+  .cap-top,.cap-bot{width:88px;height:104px;border-radius:48px}
+  .cap-shine{width:18px;height:176px;top:12px;left:12px}
+  .cross-3d{width:56px;height:56px}
+  .ring-1{width:270px;height:270px}
+  .ring-2{width:200px;height:200px}
+
+  .quick-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .quick-card{padding:18px}
+  .qicon{width:42px;height:42px;border-radius:12px}
+  .quick-card h3{font-size:17px}
+  .quick-card p{font-size:13px}
+
+  .why-grid{grid-template-columns:1fr;gap:12px}
+  .why-card{padding:18px}
+
+  .visit-wrap{grid-template-columns:1fr}
+  .map-frame{height:260px}
+
+  .foot-grid{grid-template-columns:1fr;gap:20px;text-align:center}
+  .foot-note{margin-left:auto;margin-right:auto}
+  .site-footer{padding:40px 18px 22px}
+  .wm-text{font-size:12.5px;padding:7px 14px}
+
+  .mobile-bar{display:flex}
+  .modal-card{padding:24px;border-radius:20px}
+
+  #docSearch{min-width:0;width:100%}
+  .doc-controls{flex-direction:column;align-items:stretch}
+  .chips{justify-content:flex-start;overflow-x:auto;padding-bottom:6px;flex-wrap:nowrap;-webkit-overflow-scrolling:touch}
+  .chip{flex-shrink:0}
+
+  .pharma-card,.categories,.payments,.about-story,.faq{padding:20px;border-radius:20px}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .med-input{padding:12px 14px}
+  .med-input input{font-size:15px}
+  .btn{padding:11px 16px;font-size:14px}
+
+  .cube{width:120px;height:120px}
+  .cube-face{width:120px;height:120px;font-size:42px}
+  .f-front{transform:translateZ(60px)}
+  .f-back{transform:rotateY(180deg) translateZ(60px)}
+  .f-right{transform:rotateY(90deg) translateZ(60px)}
+  .f-left{transform:rotateY(-90deg) translateZ(60px)}
+  .f-top{transform:rotateX(90deg) translateZ(60px)}
+  .f-bottom{transform:rotateX(-90deg) translateZ(60px)}
+  .about-3d{height:220px}
+}
+
+@media (max-width: 400px){
+  .quick-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .hero-stats{flex-direction:column;gap:14px;align-items:flex-start;text-align:left}
+  .stat{border-left-width:3px}
+}

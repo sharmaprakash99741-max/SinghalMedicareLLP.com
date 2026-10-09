@@ -1,0 +1,108 @@
+{
+  "clinic": {
+    "legal_name": "Singhal Medicare LLP",
+    "kind": "Pharmacy & Clinic",
+    "phone": "+91 94570 88602",
+    "phone_e164": "+919457088602",
+    "whatsapp": "919457088602",
+    "address": {
+      "line1": "Opposite Ahuja Hospital, Station Road",
+      "line2": "Khera Mohalla",
+      "city": "Shikohabad",
+      "district": "Firozabad",
+      "state": "Uttar Pradesh",
+      "pincode": "283135",
+      "country": "India"
+    },
+    "hours": {
+      "timezone": "Asia/Kolkata",
+      "open": "08:30",
+      "close": "20:00",
+      "days": [0, 1, 2, 3, 4, 5, 6]
+    },
+    "payments": ["Cash", "Debit Card", "Credit Card", "Google Pay", "PhonePe", "Paytm", "UPI"]
+  },
+  "doctors": [
+    {
+      "id": "manshi-bansal",
+      "name": "Dr. Manshi Bansal",
+      "specialty": "General Physician",
+      "category": "physician",
+      "time": "10:00 AM - 5:00 PM",
+      "start": "10:00",
+      "end": "17:00",
+      "days": null,
+      "note": "Daily as per supplied information; confirm with clinic."
+    },
+    {
+      "id": "mukesh-chaturvedi",
+      "name": "Dr. Mukesh Chaturvedi",
+      "specialty": "General Surgeon",
+      "category": "surgeon",
+      "time": "Call for timing",
+      "start": null,
+      "end": null,
+      "days": []
+    },
+    {
+      "id": "sd-sharma",
+      "name": "Dr. S.D. Sharma",
+      "specialty": "Neurologist",
+      "category": "neuro",
+      "time": "Call for timing",
+      "start": null,
+      "end": null,
+      "days": []
+    },
+    {
+      "id": "shuchita-bharadwaj",
+      "name": "Dr. Shuchita Bharadwaj",
+      "specialty": "Cosmetologist",
+      "category": "skin",
+      "time": "Wed, Fri: 11:00 AM - 2:00 PM",
+      "start": "11:00",
+      "end": "14:00",
+      "days": [3, 5]
+    },
+    {
+      "id": "rk-verma",
+      "name": "Dr. R.K. Verma",
+      "specialty": "Dermatologist and Cosmetologist",
+      "category": "skin",
+      "time": "Tue, Sat: 3:00 PM - 5:00 PM",
+      "start": "15:00",
+      "end": "17:00",
+      "days": [2, 6]
+    },
+    {
+      "id": "nancy-yadav",
+      "name": "Dr. Nancy Yadav",
+      "specialty": "Gynecologist",
+      "category": "women",
+      "time": "Call for timing",
+      "start": null,
+      "end": null,
+      "days": []
+    },
+    {
+      "id": "virat-tiwari",
+      "name": "Dr. Virat Tiwari",
+      "specialty": "Pediatrician",
+      "category": "child",
+      "time": "Call for timing",
+      "start": null,
+      "end": null,
+      "days": []
+    },
+    {
+      "id": "anup-kumar",
+      "name": "Dr. Anup Kumar",
+      "specialty": "Ayurvedic specialist (Ksharsutra)",
+      "category": "ayur",
+      "time": "Call for timing",
+      "start": null,
+      "end": null,
+      "days": []
+    }
+  ]
+}
